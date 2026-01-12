@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      MONGO_HOST: mongo
+    depends_on:
+      - mongo
+    networks:
+      - keploy-network
+
+  mongo:
+    image: mongo:6
+    ports:
+      - "27017:27017"
+    networks:
+      - keploy-network
+
+networks:
+  keploy-network:
+    external: true
