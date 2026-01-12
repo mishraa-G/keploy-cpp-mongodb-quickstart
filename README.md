@@ -25,14 +25,23 @@ The example shows how Keploy can record and replay real HTTP traffic for a C++ a
 - Testing: Keploy (record and replay)
 
 ## Project Structure
-
 .
-├── src/
-│   └── main.cpp
-├── Dockerfile
-├── docker-compose.yml
-├── keploy.yml
-└── README.md
+├── app/
+│   └── src/
+│       └── main.cpp
+│
+├── docker/
+│   ├── Dockerfile
+│   └── docker-compose.yml
+│
+├── keploy/
+│   ├── keploy.yml
+│   ├── test-set-0/
+│   └── mocks/
+│
+├── README.md
+└── .gitignore
+
 
 ## Local setup (without Docker)
 
